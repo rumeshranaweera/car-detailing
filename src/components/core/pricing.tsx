@@ -27,44 +27,44 @@ export default function PricingTwo() {
                     <li className="mb-4 flex items-center">
                       <CheckCircledIcon className="mr-2 size-4" />
                       <p className="font-semibold leading-normal">
-                        3 Team Members
+                        Dashboard Cleaning
                       </p>
                     </li>
                     <li className="mb-4 flex items-center">
                       <CheckCircledIcon className="mr-2 size-4" />
                       <p className="font-semibold leading-normal">
-                        1200+ UI Blocks
+                        Carpets Cleaning
                       </p>
                     </li>
                     <li className="mb-4 flex items-center">
                       <CheckCircledIcon className="mr-2 size-4" />
                       <p className="font-semibold leading-normal">
-                        10 GB Cloud Storage
+                        Something else
                       </p>
                     </li>
                     <li className="mb-4 flex items-center">
                       <CheckCircledIcon className="mr-2 size-4" />
                       <p className="font-semibold leading-normal">
-                        Individual Email Account
+                        Something else
                       </p>
                     </li>
-                    <li className="flex items-center">
+                    <li className="mb-4 flex items-center">
                       <CheckCircledIcon className="mr-2 size-4" />
                       <p className="font-semibold leading-normal">
-                        Premium Support
+                        Something else
                       </p>
                     </li>
                   </ul>
                   <p className="mb-6 text-lg font-semibold leading-normal text-gray-600">
                     <span>Starting from</span>
-                    <span className="ml-2 text-gray-900">$49/mo</span>
+                    <span className="ml-2 text-gray-900">$49</span>
                   </p>
                   <div className="md:inline-block">
                     <button
                       type="button"
                       className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                     >
-                      Start your free trial
+                      Reserve Your Time
                     </button>
                   </div>
                 </div>
@@ -90,44 +90,40 @@ export default function PricingTwo() {
                     <li className="mb-4 flex items-center">
                       <CheckCircledIcon className="mr-2 size-4" />
                       <p className="font-semibold leading-normal">
-                        3 Team Members
+                        Dashboard Cleaning
                       </p>
                     </li>
                     <li className="mb-4 flex items-center">
                       <CheckCircledIcon className="mr-2 size-4" />
                       <p className="font-semibold leading-normal">
-                        1200+ UI Blocks
+                        Carpets Cleaning
                       </p>
                     </li>
                     <li className="mb-4 flex items-center">
                       <CheckCircledIcon className="mr-2 size-4" />
                       <p className="font-semibold leading-normal">
-                        10 GB Cloud Storage
+                        Something else
                       </p>
                     </li>
                     <li className="mb-4 flex items-center">
                       <CheckCircledIcon className="mr-2 size-4" />
-                      <p className="font-semibold leading-normal">
-                        Individual Email Account
-                      </p>
+                      <p className="font-semibold leading-normal">More</p>
                     </li>
                     <li className="flex items-center">
                       <CheckCircledIcon className="mr-2 size-4" />
-                      <p className="font-semibold leading-normal">
-                        Premium Support
-                      </p>
+                      <p className="font-semibold leading-normal">More</p>
                     </li>
                   </ul>
                   <p className="mb-6 text-lg font-semibold leading-normal text-gray-600">
                     <span>Starting from</span>
-                    <span className="ml-2 text-gray-900">$99/mo</span>
+                    <span className="ml-2 text-gray-900">$99</span>
                   </p>
                   <div className="md:inline-block">
                     <button
                       type="button"
                       className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                     >
-                      Start your free trial
+                      Reserve Your Time
                     </button>
                   </div>
                 </div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function HeroOne() {
   return (
     <div className="relative w-full bg-white">
@@ -33,9 +35,10 @@ export default function HeroOne() {
           </form>
         </div>
         <div className="relative lg:col-span-5 lg:-mr-8 xl:col-span-6">
-          <img
+          <Image
+            fill
             className="aspect-[3/2] bg-gray-50 object-cover lg:aspect-[4/3] lg:h-[700px] xl:aspect-[16/9]"
-            src="https://plus.unsplash.com/premium_photo-1679079456783-5d862f755557?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjQ3fHxtYW4lMjB3aXRoJTIwbGFwdG9wfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+            src="https://img.freepik.com/free-photo/close-up-car-care-process_23-2149193559.jpg?t=st=1719852400~exp=1719856000~hmac=4a9ad65b807735ab66eedde0b01635c510fe3507263510d8bb74bb64ebc494c1&w=1800"
             alt=""
           />
         </div>

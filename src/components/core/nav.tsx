@@ -1,5 +1,6 @@
 "use client";
 
+import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import React from "react";
 
 const menuItems = [
@@ -68,7 +69,7 @@ export default function ExampleNavbarOne() {
         </div>
         <div className="lg:hidden">
           <div onClick={toggleMenu} className="h-6 w-6 cursor-pointer">
-            ♎
+            <HamburgerMenuIcon className="size-5" />
           </div>
         </div>
         {isMenuOpen && (
@@ -101,7 +102,7 @@ export default function ExampleNavbarOne() {
                     >
                       <span className="sr-only">Close menu</span>
                       <span className="h-6 w-6" aria-hidden="true">
-                        X
+                        <Cross1Icon fontSize={24} />
                       </span>
                     </button>
                   </div>
