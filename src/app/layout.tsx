@@ -18,9 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col`}>
+      <body
+        className={`${inter.className} flex flex-col min-h-screen prose-h1:prose-2xl`}
+      >
         <Nav />
-        <main className="grow">{children}</main>
+        <main className="grow mt-14 container">{children}</main>
         <Footer />
       </body>
     </html>

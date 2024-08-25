@@ -1,20 +1,21 @@
 "use client";
-
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import React from "react";
+import { Button, buttonVariants } from "../ui/button";
+import Link from "next/link";
 
 const menuItems = [
   {
     name: "Home",
-    href: "#",
+    href: "/",
   },
   {
     name: "About",
-    href: "#",
+    href: "/about",
   },
   {
     name: "Contact",
-    href: "#",
+    href: "/contact",
   },
 ];
 
@@ -49,23 +50,20 @@ export default function ExampleNavbarOne() {
           <ul className="inline-flex space-x-8">
             {menuItems.map((item) => (
               <li key={item.name}>
-                <a
+                <Link
                   href={item.href}
                   className="text-sm font-semibold text-gray-800 hover:text-gray-900"
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </div>
         <div className="hidden lg:block">
-          <button
-            type="button"
-            className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-          >
-            Button text
-          </button>
+          <Link className={buttonVariants({ size: "sm" })} href="/reserve">
+            Reserve
+          </Link>
         </div>
         <div className="lg:hidden">
           <div onClick={toggleMenu} className="h-6 w-6 cursor-pointer">
@@ -101,7 +99,10 @@ export default function ExampleNavbarOne() {
                       className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                     >
                       <span className="sr-only">Close menu</span>
-                      <span className="h-6 w-6" aria-hidden="true">
+                      <span
+                        className="size-6 grid place-items-center"
+                        aria-hidden="true"
+                      >
                         <Cross1Icon fontSize={24} />
                       </span>
                     </button>
@@ -110,7 +111,7 @@ export default function ExampleNavbarOne() {
                 <div className="mt-6">
                   <nav className="grid gap-y-4">
                     {menuItems.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
                         className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
@@ -118,16 +119,16 @@ export default function ExampleNavbarOne() {
                         <span className="ml-3 text-base font-medium text-gray-900">
                           {item.name}
                         </span>
-                      </a>
+                      </Link>
                     ))}
                   </nav>
                 </div>
-                <button
-                  type="button"
-                  className="mt-4 w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                <Link
+                  className={buttonVariants({ size: "sm" }) + " mt-4 w-full"}
+                  href="/reserve"
                 >
-                  Button text
-                </button>
+                  Reserve
+                </Link>
               </div>
             </div>
           </div>

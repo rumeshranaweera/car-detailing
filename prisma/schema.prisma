@@ -24,15 +24,29 @@ model User {
   email        String        @unique
   createdAt    DateTime      @default(now())
   reservations Reservation[]
+
+  @@map("users")
 }
 
 model TimeSlot {
   id           String        @id @default(uuid())
   startTime    DateTime
   endTime      DateTime
-  dayOfWeek    String
+  dayOfWeek    DaysOfWeek?
   createdAt    DateTime      @default(now())
   reservations Reservation[]
+
+  @@map("timeSlots")
+}
+
+enum DaysOfWeek {
+  sunday
+  monday
+  tuesday
+  wednesday
+  thursday
+  friday
+  saturday
 }
 
 model Reservation {
@@ -42,4 +56,6 @@ model Reservation {
   timeSlot   TimeSlot @relation(fields: [timeSlotId], references: [id])
   timeSlotId String
   reservedAt DateTime @default(now())
+
+  @@map("Reservations")
 }
