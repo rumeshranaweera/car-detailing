@@ -29,7 +29,7 @@ export default function ExampleNavbarOne() {
   return (
     <div className="fixed z-40 top-0 left-0 w-full bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
-        <div className="inline-flex items-center space-x-2">
+        <Link href="/" className="inline-flex items-center space-x-2">
           <span>
             <svg
               width="30"
@@ -45,7 +45,7 @@ export default function ExampleNavbarOne() {
             </svg>
           </span>
           <span className="font-bold">AVI</span>
-        </div>
+        </Link>
         <div className="hidden lg:block">
           <ul className="inline-flex space-x-8">
             {menuItems.map((item) => (

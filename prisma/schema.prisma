@@ -30,8 +30,8 @@ model User {
 
 model TimeSlot {
   id           String        @id @default(uuid())
-  startTime    DateTime
-  endTime      DateTime
+  startTime    DateTime      @db.Time()
+  endTime      DateTime      @db.Time()
   dayOfWeek    DaysOfWeek?
   createdAt    DateTime      @default(now())
   reservations Reservation[]

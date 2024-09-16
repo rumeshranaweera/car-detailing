@@ -1,6 +1,7 @@
 "use server";
 
 import prisma from "@/lib/db";
+import { DaysOfWeek } from "@prisma/client";
 
 export async function getAllReservations(
   perPage: number,
@@ -22,14 +23,22 @@ export async function getAllReservations(
   };
 }
 export async function createReservation(formData: FormData) {
-  const { time_period, day } = Object.fromEntries(formData);
+  const time_period = formData.get("time_period") as string;
+  const day = formData.get("day") as DaysOfWeek;
+  //3:00pm - 6:00pm
+  //grab start time and end time
+  const [startTime, endTime] = time_period
+    .split(" - ")
+    .map((time) => new Date(`${time} ${day}`).toISOString());
+
   //wait 3s
-  await new Promise((resolve) => setTimeout(resolve, 3000));
-  console.log("createReservation => ", time_period, day);
-  //   return prisma.reservation.create({
-  //     data: {
-  //       userId: userId as string,
-  //       timeSlotId: timeSlotId as string,
-  //     },
-  //   });
+  //   await new Promise((resolve) => setTimeout(resolve, 3000));
+  console.log("createReservation => ", startTime, endTime, day);
+  return prisma.timeSlot.create({
+    data: {
+      startTime,
+      endTime,
+      dayOfWeek: day,
+    },
+  });
 }
